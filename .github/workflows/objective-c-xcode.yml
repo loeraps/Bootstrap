@@ -2,9 +2,9 @@ name: Build and Package
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "ux/new-design" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "ux/new-design" ]
   workflow_dispatch:
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: Bootstrap.tipa
+          name: BootstrapUI.tipa
           path: ./packages/Bootstrap.tipa
   update-release:
     name: Release .tipa
